@@ -1,7 +1,7 @@
 # statsd-librato
 Simple docker container with Etsy statsd and librato backend pre-installed.
 
-
+Latest docs: https://github.com/markocelan/docker-statsd-librato
 
 **Important note:** _You **can** run this container for Graphite only backend too_
 

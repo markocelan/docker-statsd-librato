@@ -11,4 +11,6 @@ RUN mkdir -p /app && \
 ADD files/entrypoint.sh /
 RUN chmod +x /*.sh
 
+EXPOSE 8125/udp 8126
+
 ENTRYPOINT [ "/entrypoint.sh" ]
