@@ -1,4 +1,4 @@
-# docker-statsd-librato
+# statsd-librato
 Simple docker container with Etsy statsd and librato backend pre-installed.
 
 
@@ -21,28 +21,28 @@ Also, example configs provide you a way to configure StatsD daemon by passing en
 
 
 ### simple usage examples:
-  * run docker-statsd-librato with **default** config (both backends are enabled)
+  * run statsd-librato with **default** config (both backends are enabled)
 ```bash
 docker run  -e GRAPHITE_HOST=graphite.example.com \
             -e LIBRATO_EMAIL=your@email.com \
             -e LIBRATO_TOKEN=XXXX_YOUR_LIBRATO_TOKEN_XXXX \
-            markocelan/docker-statsd-librato
+            markocelan/statsd-librato
 ```
 
-  * run docker-statsd-librato with **librato-only** config
+  * run statsd-librato with **librato-only** config
 ```bash
 docker run  -e LIBRATO_EMAIL=your@email.com \
             -e LIBRATO_TOKEN=XXXX_YOUR_LIBRATO_TOKEN_XXXX \
             -e CONFIG_URL="https://raw.githubusercontent.com/markocelan/docker-statsd-librato/master/example/statsd-config_librato.js" \
-            markocelan/docker-statsd-librato
+            markocelan/statsd-librato
 ```
 
-  * run docker-statsd-librato with **graphite-only** config
+  * run statsd-librato with **graphite-only** config
 ```bash
 docker run  -e GRAPHITE_HOST=localhost \
             -e GRAPHITE_HOST=2003 \
             -e CONFIG_URL="https://raw.githubusercontent.com/markocelan/docker-statsd-librato/master/example/statsd-config_graphite.js" \
-            markocelan/docker-statsd-librato
+            markocelan/statsd-librato
 ```
 
 
@@ -52,11 +52,11 @@ docker run  -e GRAPHITE_HOST=localhost \
 docker run  -e CUSTOM_VAR1="something" \
             -e CUSTOM_VAR2="something else" \
             -e CONFIG_URL="https://URL_TO_YOUR_OWN/statsd-config.js" \
-            markocelan/docker-statsd-librato
+            markocelan/statsd-librato
 ```
 
   * if you are not comfortable downloading config file via network you can 'mount' it at runtime from Docker host
 ```bash
-docker run -v FULL_PATH_TO_YOUR/statsd-config.js:/statsd-config.js markocelan/docker-statsd-librato
+docker run -v FULL_PATH_TO_YOUR/statsd-config.js:/statsd-config.js markocelan/statsd-librato
 ```
 
