@@ -26,6 +26,7 @@ Also, example configs provide you a way to configure StatsD daemon by passing en
 docker run  -e GRAPHITE_HOST=graphite.example.com \
             -e LIBRATO_EMAIL=your@email.com \
             -e LIBRATO_TOKEN=XXXX_YOUR_LIBRATO_TOKEN_XXXX \
+            -p 8125:8125/udp \
             markocelan/statsd-librato
 ```
 
@@ -34,6 +35,7 @@ docker run  -e GRAPHITE_HOST=graphite.example.com \
 docker run  -e LIBRATO_EMAIL=your@email.com \
             -e LIBRATO_TOKEN=XXXX_YOUR_LIBRATO_TOKEN_XXXX \
             -e CONFIG_URL="https://raw.githubusercontent.com/markocelan/docker-statsd-librato/master/example/statsd-config_librato.js" \
+            -p 8125:8125/udp \
             markocelan/statsd-librato
 ```
 
@@ -42,6 +44,7 @@ docker run  -e LIBRATO_EMAIL=your@email.com \
 docker run  -e GRAPHITE_HOST=localhost \
             -e GRAPHITE_HOST=2003 \
             -e CONFIG_URL="https://raw.githubusercontent.com/markocelan/docker-statsd-librato/master/example/statsd-config_graphite.js" \
+            -p 8125:8125/udp \
             markocelan/statsd-librato
 ```
 
@@ -52,6 +55,7 @@ docker run  -e GRAPHITE_HOST=localhost \
 docker run  -e CUSTOM_VAR1="something" \
             -e CUSTOM_VAR2="something else" \
             -e CONFIG_URL="https://URL_TO_YOUR_OWN/statsd-config.js" \
+            -p 8125:8125/udp \
             markocelan/statsd-librato
 ```
 
