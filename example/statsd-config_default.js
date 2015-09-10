@@ -19,8 +19,10 @@
 //
 , graphitePort: process.env.GRAPHITE_PORT
 , graphiteHost: process.env.GRAPHITE_HOST
-, globalPrefix: 'stats.' + require('os').hostname()
-, legacyNamespace: false
+, graphite: {
+    globalPrefix: 'stats.' + require('os').hostname()
+    , legacyNamespace: false
+}
 
 //
 //      -[backend]- Librato settings
