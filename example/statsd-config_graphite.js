@@ -22,6 +22,6 @@
 , graphite: {
     globalPrefix: 'stats.' + require('os').hostname()
     , legacyNamespace: false
-}
+  }
 
 }
